@@ -48,3 +48,14 @@ On the sEEmsR Threads platform, users can:
 - **Manage Profile**: Update your profile information and settings.
 - **Discover Suggested Users**: Find new users to follow based on suggestions.
 - **Enjoy a Responsive Design**: Access the platform seamlessly on various devices with a responsive design powered by Chakra UI.
+
+## Set up environment variables:
+
+Create a .env file in the root directory and add the following:
+
+
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
