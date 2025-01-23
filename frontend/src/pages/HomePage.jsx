@@ -5,6 +5,8 @@ import Post from "../components/Post";
 import { useRecoilState } from "recoil";
 import postsAtom from "../atoms/postsAtom";
 import SuggestedUsers from "../components/SuggestedUsers";
+import CustomNavbar from "../components/HeaderNav";
+
 
 const HomePage = () => {
 	const [posts, setPosts] = useRecoilState(postsAtom);
@@ -33,6 +35,9 @@ const HomePage = () => {
 	}, [showToast, setPosts]);
 
 	return (
+		<>
+		<CustomNavbar />
+
 		<Flex gap='10' alignItems={"flex-start"}>
 			<Box flex={70}>
 				{!loading && posts.length === 0 && <h1>Follow some users to see the feed</h1>}
@@ -57,6 +62,7 @@ const HomePage = () => {
 				<SuggestedUsers />
 			</Box>
 		</Flex>
+		</>
 	);
 };
 
